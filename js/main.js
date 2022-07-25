@@ -1,6 +1,6 @@
-let elList = document.querySelector(".list")
-let newLi = document.createElement("li")
-elList.appendChild(newLi)
+let elList = document.querySelector(".list");
+let newLi = document.createElement("li");
+elList.appendChild(newLi);
 let users = [
     {
         name: "Avazbek",
@@ -30,15 +30,18 @@ let users = [
         name: "Toxir",
         telNumber: "998911645022"
     }
-]
+];
 
 
 
 function findUser(array, number) {
-    let user = ""
+    let user = "";
     for (const item of array) {
         if (item.telNumber == number) {
-            user = item.name
+            user = item.name;
+        } else {
+            newLi.textContent = user;
+            console.log(user);;
         }
     }
 
